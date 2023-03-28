@@ -1,0 +1,6 @@
+AIRS*
+GENERATED_CSV*
+*.nc
+*.pyc
+fyp_env*
+A_DATA_ERA/*
