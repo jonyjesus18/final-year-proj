@@ -25,6 +25,12 @@ class map_grid():
             self.lon = np.genfromtxt(f'COORDINATES_ERA/COORDINATES_ERA5_LON.csv', delimiter=',')
             self.grid_ = np.meshgrid(self.lon,self.lat)
             self.stacked = np.transpose(self.grid_,(1,2,0))
+
+        elif source.lower() == 'era5_online':
+            self.lat = np.genfromtxt(f'COORDINATES_ERA5_ONLINE/COORDINATES_ERA5_ONLINE_LAT.csv', delimiter=',')
+            self.lon = np.genfromtxt(f'COORDINATES_ERA5_ONLINE/COORDINATES_ERA5_ONLINE_LON.csv', delimiter=',')
+            self.grid_ = np.meshgrid(self.lon,self.lat)
+            self.stacked = np.transpose(self.grid_,(1,2,0))
         else:
             raise Exception('Please specify source')
 
@@ -43,7 +49,7 @@ class map_grid():
             
             a = np.where((a[...,0] > min_lat) & (a[...,0] < max_lat) & (a[...,1] > min_lon) & (a[...,1] < max_lon) )
 
-        if self.source.lower() == 'era5':
+        else :
             a = self.stacked
             a = np.where((a[...,1] > min_lat) & (a[...,1] < max_lat) & (a[...,0] > min_lon) & (a[...,0] < max_lon) )
         return np.transpose(a)
