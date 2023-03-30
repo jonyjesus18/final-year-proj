@@ -12,23 +12,23 @@ class map_grid():
         if source.lower() == 'airs':
  
 
-            self.nh_lat = np.genfromtxt(f'COORDINATES_{grid_size}KM_GRID/Airs_nh_lat_{grid_size}_grid.csv', delimiter=',')
-            self.nh_lon = np.genfromtxt(f'COORDINATES_{grid_size}KM_GRID/Airs_nh_lon_{grid_size}_grid.csv', delimiter=',')
-            self.sh_lat = np.genfromtxt(f'COORDINATES_{grid_size}KM_GRID/Airs_sh_lat_{grid_size}_grid.csv', delimiter=',')
-            self.sh_lon = np.genfromtxt(f'COORDINATES_{grid_size}KM_GRID/Airs_sh_lon_{grid_size}_grid.csv', delimiter=',')
+            self.nh_lat = np.genfromtxt(f'coordinates_{grid_size}km_grid/Airs_nh_lat_{grid_size}_grid.csv', delimiter=',')
+            self.nh_lon = np.genfromtxt(f'coordinates_{grid_size}km_grid/Airs_nh_lon_{grid_size}_grid.csv', delimiter=',')
+            self.sh_lat = np.genfromtxt(f'coordinates_{grid_size}km_grid/Airs_sh_lat_{grid_size}_grid.csv', delimiter=',')
+            self.sh_lon = np.genfromtxt(f'coordinates_{grid_size}km_grid/Airs_sh_lon_{grid_size}_grid.csv', delimiter=',')
 
             self.nh_stacked = np.stack((self.nh_lat, self.nh_lon), axis=2)
             self.sh_stacked = np.stack((self.sh_lat, self.sh_lon), axis=2)
 
         elif source.lower() == 'era5':
-            self.lat = np.genfromtxt(f'COORDINATES_ERA/COORDINATES_ERA5_LAT.csv', delimiter=',')
-            self.lon = np.genfromtxt(f'COORDINATES_ERA/COORDINATES_ERA5_LON.csv', delimiter=',')
+            self.lat = np.genfromtxt(f'coordinates_era/COORDINATES_ERA5_LAT.csv', delimiter=',')
+            self.lon = np.genfromtxt(f'coordinates_era/COORDINATES_ERA5_LON.csv', delimiter=',')
             self.grid_ = np.meshgrid(self.lon,self.lat)
             self.stacked = np.transpose(self.grid_,(1,2,0))
 
         elif source.lower() == 'era5_online':
-            self.lat = np.genfromtxt(f'COORDINATES_ERA5_ONLINE/COORDINATES_ERA5_ONLINE_LAT.csv', delimiter=',')
-            self.lon = np.genfromtxt(f'COORDINATES_ERA5_ONLINE/COORDINATES_ERA5_ONLINE_LON.csv', delimiter=',')
+            self.lat = np.genfromtxt(f'coordinates_era5_online/COORDINATES_ERA5_ONLINE_LAT.csv', delimiter=',')
+            self.lon = np.genfromtxt(f'coordinates_era5_online/COORDINATES_ERA5_ONLINE_LON.csv', delimiter=',')
             self.grid_ = np.meshgrid(self.lon,self.lat)
             self.stacked = np.transpose(self.grid_,(1,2,0))
         else:
