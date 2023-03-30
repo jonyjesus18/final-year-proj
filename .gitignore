@@ -5,4 +5,6 @@ GENERATED_CSV*
 fyp_env*
 A_DATA_ERA/*
 A_DATA_ERA*
-PROCESSED_ERA5_ONLINE/*
+processed_era5_online*
+pre_processed_era5_online*
+ssw_events_saved/*
