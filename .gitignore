@@ -8,3 +8,4 @@ A_DATA_ERA*
 processed_era5_online*
 pre_processed_era5_online*
 ssw_events_saved/*
+.DS_Store
