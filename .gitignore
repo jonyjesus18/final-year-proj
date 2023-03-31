@@ -3,9 +3,8 @@ GENERATED_CSV*
 *.nc
 *.pyc
 fyp_env*
-A_DATA_ERA/*
-A_DATA_ERA*
 processed_era5_online*
 pre_processed_era5_online*
+pre_processed_era5_sftp*
 ssw_events_saved/*
 .DS_Store
