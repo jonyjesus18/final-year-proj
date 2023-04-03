@@ -51,7 +51,7 @@ class map_grid():
 
         else :
             a = self.stacked
-            a = np.where((a[...,1] > min_lat) & (a[...,1] < max_lat) & (a[...,0] > min_lon) & (a[...,0] < max_lon) )
+            a = np.where((a[...,1] > min_lat) & (a[...,1] < max_lat) )# & (a[...,0] > min_lon) & (a[...,0] < max_lon) )
         return np.transpose(a)
 
 class dataset():
