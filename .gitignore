@@ -7,4 +7,5 @@ processed_era5_online*
 pre_processed_era5_online*
 pre_processed_era5_sftp*
 ssw_events_saved/*
+processed_airs_sftp/*
 .DS_Store
