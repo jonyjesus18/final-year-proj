@@ -1,7 +1,9 @@
 % Create a new figure window.
-figure('Position',[100 100 500 500])
+figure('Name', 'Longitude and Latitude Plot')
 
-% Add a map view object to the figure.
-figure
-p = projcrs(3035);
-newmap(p)
+% Add a geographic axes to the figure window.
+
+geoshow(lat,lon,data)
+
+% Add a title and labels to the plot.
+title('Longitude and Latitude Plot')
