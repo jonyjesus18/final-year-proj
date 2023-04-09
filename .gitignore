@@ -2,6 +2,7 @@ AIRS*
 GENERATED_CSV*
 *.nc
 *.pyc
+*.mat
 fyp_env*
 processed_era5_online*
 pre_processed_era5_online*
