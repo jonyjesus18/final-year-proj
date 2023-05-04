@@ -1,14 +1,3 @@
-# [Airs.X,Airs.Y] = ndgrid(Airs.x,Airs.y); 
-# [Airs.NH.Lat,Airs.NH.Lon] = reckon( 89.999,0,km2deg(sqrt(Airs.x.^2 + Airs.y.^2)),atan2d(Airs.x,Airs.y)); 
-# [Airs.SH.Lat,Airs.SH.Lon] = reckon(-89.999,0,km2deg(sqrt(Airs.x.^2 + Airs.y.^2)),atan2d(Airs.x,Airs.y)); 
-# lat = Airs.NH.Lat;
-# lon = Airs.NH.Lon;
-# data = double(Airs.NH.Night.k(:,:,1));
-
-# csvwrite('Airs_nh_lat_125_grid.csv',Airs.NH.Lat)
-# csvwrite('Airs_nh_lon_125_grid.csv',Airs.NH.Lon)
-# csvwrite('Airs_sh_lat_125_grid.csv',Airs.SH.Lat)
-# csvwrite('Airs_sh_lon_125_grid.csv',Airs.SH.Lon)
 
 
 
