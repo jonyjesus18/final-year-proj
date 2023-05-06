@@ -10,3 +10,4 @@ pre_processed_era5_sftp*
 ssw_events_saved/*
 processed_airs_sftp/*
 .DS_Store
+m_map/*
